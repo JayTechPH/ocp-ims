@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    #user-info {
+      background: #fff;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    p {
+      margin: 8px 0;
+    }
+    button {
+      padding: 8px 14px;
+      margin-top: 15px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Welcome, <%= username %>!</h2>
+
+  <div id="user-info">
+    <p><strong>Username:</strong> <%= username %></p>
+    <p><strong>Role:</strong> <%= role %></p>
+
+    <% if (role === 'admin') { %>
+      <p><strong>Exclusive:</strong> 🔐 Admin-only content shown here!</p>
+    <% } else { %>
+      <p><strong>Exclusive:</strong> ❌ Not available for your role</p>
+    <% } %>
+  </div>
+
+  <% if (role === 'admin') { %>
+    <button onclick="location.href='/adduser'">➕ Add User</button>
+  <% } %>
+  <button onclick="location.href='/logout'">🚪 Logout</button>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "ocp-ims",
+  "version": "1.0.0",
+  "description": "A centralized information system for managing legal cases and hearings.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"No test setup yet.\" && exit 0",
+    "install": "npm install"
+  },
+  "keywords": [
+    "case-management",
+    "legal",
+    "nodejs",
+    "information-system"
+  ],
+  "author": "JayTechPH",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7"
+  }
+}
