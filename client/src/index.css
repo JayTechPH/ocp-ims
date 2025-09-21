@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.btn-tag {
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-text {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #34373E;
+  padding: 6px;
+  border-radius: 4px;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.3s ease 1s;
+}
+
+.btn-tag:hover{
+  background: #34373E;
+}
+
+.btn-tag:hover .btn-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
